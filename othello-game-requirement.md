@@ -22,7 +22,7 @@ Basic strategy: secure corners, control edges, maximize mobility, and aim for st
 * Show the current numbers of discs in each color.
 * Display which side wins at the end, and allow user to start a new game.
 
-## Technical asks
+## Technical requirements
 
 * Write a single page application with no backend service.
 * Written in TypeScript, HTML and CSS.
@@ -32,3 +32,5 @@ Basic strategy: secure corners, control edges, maximize mobility, and aim for st
 * Use A-star algorithm for computer mode. Harder levels means searching more depth levels in A-star algorithm.
 * Do not use existing NPM packages for the core logics, such as A-star algorithm and the game logic. Implement from scratch.
 * Code should be modular, for example, implement A-star algorithm in a separate TypeScript file, implement rule of the game in a separate TypeScript file too. Group similar files in folders.
+* Add test cases for TypeScript modules. Extensive test cases are needed for critical modules such as A-star algorithm and the game logic.
+* At the end, compile TypeScript code to minimal JavaScript so that it can run in a web browser.
