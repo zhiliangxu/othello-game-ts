@@ -53,7 +53,7 @@ function evaluateWith(game: Game, player: Player, cfg: AIConfig): number {
        + cfg.cornerW*cornerDiff
        + cfg.positionW*(psq/10)
        + cfg.frontierW*frontierDiffVal
-       + cfg.stableW*stableDiffVal;
+  + cfg.stableW*stableDiffVal;
 }
 
 function frontierDiff(game: Game, player: Player): number {
@@ -102,12 +102,12 @@ export class AStarAI {
     this.cfg = ((): AIConfig => {
       switch (difficulty) {
         case 'easy':
-          return { depth: 2, maxNodes: 2000, maxMs: 60, mobilityW: 2, discW: 1, cornerW: 15, positionW: 0.5, frontierW: 0.5, stableW: 0.5, endgameN: 0, noise: 0.6 };
+          return { depth: 3, maxNodes: 2000, maxMs: 60, mobilityW: 2, discW: 1, cornerW: 15, positionW: 0.5, frontierW: 0.5, stableW: 0.5, endgameN: 0, noise: 0.6 };
         case 'medium':
-          return { depth: 5, maxNodes: 20000, maxMs: 220, mobilityW: 3, discW: 1, cornerW: 25, positionW: 2, frontierW: 1.5, stableW: 1.5, endgameN: 8 };
+          return { depth: 6, maxNodes: 20000, maxMs: 220, mobilityW: 3, discW: 1, cornerW: 25, positionW: 2, frontierW: 1.5, stableW: 1.5, endgameN: 8 };
         case 'hard':
         default:
-          return { depth: 8, maxNodes: 200000, maxMs: 900, mobilityW: 4, discW: 1, cornerW: 45, positionW: 7, frontierW: 3, stableW: 4, endgameN: 12 };
+          return { depth: 9, maxNodes: 200000, maxMs: 900, mobilityW: 4, discW: 1, cornerW: 45, positionW: 7, frontierW: 3, stableW: 4, endgameN: 12 };
       }
     })();
   }
@@ -224,7 +224,10 @@ function negamaxEndgame(game: Game, toMove: Player, rootPlayer: Player, alpha: n
   if (now - start > maxMs) {
     // fallback to simple evaluation to keep things responsive
     return evaluateWith(game, rootPlayer, {
-      depth:0,maxNodes:0,maxMs:0,mobilityW:3,discW:1,cornerW:25,positionW:2,frontierW:1,stableW:1,endgameN:0
+      depth:0,maxNodes:0,maxMs:0,
+      mobilityW:3,discW:1,cornerW:25,positionW:2,
+      frontierW:1,stableW:1,
+      endgameN:0
     });
   }
   if (game.isOver()) {
