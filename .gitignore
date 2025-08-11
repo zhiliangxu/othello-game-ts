@@ -416,3 +416,9 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+node_modules
+dist
+coverage
+.DS_Store
+.vscode

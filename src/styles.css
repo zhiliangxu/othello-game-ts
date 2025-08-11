@@ -1,0 +1,39 @@
+/* Board & discs */
+.board {
+  position: relative;
+}
+.board-cell {
+  background-color: #2e8b57;
+}
+.disc {
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+.disc.animate {
+  transform: translate(-50%, -50%) scale(1);
+}
+.disc.black { background-color: #111; }
+.disc.white { background-color: #eee; }
+.disc.animate { transform: translate(-50%, -50%) scale(1.0); }
+
+/* Hint for legal move */
+.hint {
+  width: 20%;
+  height: 20%;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255,255,255,0.35);
+  box-shadow: 0 0 4px rgba(0,0,0,0.2) inset;
+}
+.hint.black { background-color: rgba(0,0,0,0.35); }
+.hint.white { background-color: rgba(255,255,255,0.55); }
