@@ -15,3 +15,8 @@ This is a single page web app implementing Othello with human vs human and human
 
 ## Play online
 [Othello Game](https://zhiliangxu.github.io/othello-game)
+
+## Difficulty levels
+- Easy: shallow search, small time/node budget, lighter heuristic with a touch of randomness.
+- Medium: deeper search, larger budget, stronger weighting for mobility/corners/position.
+- Hard: deepest search, largest budget, strong positional (piece-square) and corner emphasis.
