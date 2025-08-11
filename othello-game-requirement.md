@@ -32,5 +32,5 @@ Basic strategy: secure corners, control edges, maximize mobility, and aim for st
 * Use A-star algorithm for computer mode. Harder levels means searching more depth levels in A-star algorithm.
 * Do not use existing NPM packages for the core logics, such as A-star algorithm and the game logic. Implement from scratch.
 * Code should be modular, for example, implement A-star algorithm in a separate TypeScript file, implement rule of the game in a separate TypeScript file too. Group similar files in folders.
-* Add test cases for TypeScript modules. Extensive test cases are needed for critical modules such as A-star algorithm and the game logic.
+* Add test cases for TypeScript modules. Extensive test cases are needed for critical modules such as A-star algorithm and the game logic. Make sure all test cases pass.
 * At the end, compile TypeScript code to minimal JavaScript so that it can run in a web browser.
