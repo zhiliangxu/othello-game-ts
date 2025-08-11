@@ -13,3 +13,5 @@ This is a single page web app implementing Othello with human vs human and human
 - `npm run preview` - preview production build
 - `npm test` - run tests
 
+## Play online
+[Othello Game](https://zhiliangxu.github.io/othello-game/index.html)
